@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class GunController : MonoBehaviour {
 
@@ -12,6 +13,10 @@ public class GunController : MonoBehaviour {
 	public WandController _Controller;
 	public Transform _GunTip;
 	public GameObject _BulletPrefab;
+
+
+    [Header("Events")]
+    public UnityEvent _onBulletFiredEvent;
 
 	// Use this for initialization
 	void Start () {
@@ -43,9 +48,10 @@ public class GunController : MonoBehaviour {
 		//instantiate bullet
 		GameObject createdBullet = Instantiate (_BulletPrefab, _GunTip.position, Quaternion.identity) as GameObject;
 		createdBullet.transform.forward = _GunTip.transform.forward;
+        _onBulletFiredEvent.Invoke();
+        //vibrate controller
+        StartCoroutine(FireRumble(10, 0.15f));
 
-		//vibrate controller
-		StartCoroutine(FireRumble(10, 0.15f));
 	}
 		
 	IEnumerator Recharge(){
