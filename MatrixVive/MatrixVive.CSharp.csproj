@@ -84,6 +84,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\#project\Scripts\Eloi\CollisionWithLayerDetection.cs" />
+    <Compile Include="Assets\#project\Scripts\Eloi\Destroyable.cs" />
+    <Compile Include="Assets\#project\Scripts\Eloi\MoveFoward.cs" />
+    <Compile Include="Assets\#project\Scripts\Eloi\Tools.cs" />
+    <Compile Include="Assets\#project\Scripts\InputController.cs" />
+    <Compile Include="Assets\#project\Scripts\WandController.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
