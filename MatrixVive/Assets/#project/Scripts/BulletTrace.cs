@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BulletTrace : MonoBehaviour {
 
-	private float _MaxLineDistance = 4;
+	public float _MaxLineDistance = 4;
 	private bool _MaxDistanceReached = false;
 	private LineRenderer LR;
 	private Vector3 _StartPos;

@@ -40,6 +40,7 @@ public class GunController : MonoBehaviour {
 				StartCoroutine (EmptyRumble ());
 				_Empty.Play ();
 				_ReadyToFire = false;
+
 				if (!_Recharging)
 				{
 					_Recharging = true;
@@ -55,12 +56,13 @@ public class GunController : MonoBehaviour {
 		createdBullet.transform.forward = _GunTip.transform.forward;
         _onBulletFiredEvent.Invoke();
         //vibrate controller
-        StartCoroutine(FireRumble(10, 0.15f));
+		StartCoroutine(FireRumble(10, 0.075f*TimeSlower.factor));
 
 	}
 		
 	IEnumerator Recharge(){
-		yield return new WaitForSeconds (_ReloadTime);
+		Debug.Log (_ReloadTime * TimeSlower.factor);
+		yield return new WaitForSeconds (_ReloadTime*TimeSlower.factor);
 
 		StartCoroutine (RechargeRumble ());
 		_Bullets = _MagazineSize;
@@ -70,13 +72,13 @@ public class GunController : MonoBehaviour {
 
 	IEnumerator RechargeRumble(){
 		_Controller.Vibrate (2000);
-		yield return new WaitForSeconds (0.1f);
+		yield return new WaitForSeconds (0.05f*TimeSlower.factor);
 		_Controller.Vibrate (2000);
 	}
 
 	IEnumerator EmptyRumble(){
 		_Controller.Vibrate (2000);
-		yield return new WaitForSeconds (0.1f);
+		yield return new WaitForSeconds (0.05f*TimeSlower.factor);
 	}
 
 	IEnumerator FireRumble(int rumbles, float duration){
@@ -87,7 +89,7 @@ public class GunController : MonoBehaviour {
 			timePassed += ( duration / rumbles );
 
 			_Controller.Vibrate (2000);
-			yield return new WaitForSeconds (duration / rumbles);
+			yield return new WaitForSeconds ((duration / rumbles)*TimeSlower.factor);
 		}
 	}
 
