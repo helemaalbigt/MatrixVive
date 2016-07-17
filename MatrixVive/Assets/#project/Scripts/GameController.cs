@@ -4,7 +4,7 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public static int currentScore = 0;
-	public static float delayToRestart= 10f;
+	public static float delayToRestart= 5f;
 	// Use this for initialization
 	void Start () {
 		

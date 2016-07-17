@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class GunController : MonoBehaviour {
 
 	public float _ReloadTime;
+	public int _MagazineSize = 15;
 
 	private bool _ReadyToFire = true;
 	private bool _Recharging = false;
@@ -23,6 +24,7 @@ public class GunController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_Empty = GetComponent<AudioSource> ();
+		_Bullets = _MagazineSize;
 	}
 
 	// Update is called once per frame
@@ -61,7 +63,7 @@ public class GunController : MonoBehaviour {
 		yield return new WaitForSeconds (_ReloadTime);
 
 		StartCoroutine (RechargeRumble ());
-		_Bullets = 6;
+		_Bullets = _MagazineSize;
 		_ReadyToFire = true;
 		_Recharging = false;
 	}
