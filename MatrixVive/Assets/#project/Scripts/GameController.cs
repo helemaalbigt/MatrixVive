@@ -7,19 +7,25 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
 	private IEnumerator GameLoop(){
-
+		yield return StartCoroutine(RoundStarting());
+		yield return StartCoroutine(RoundPlaying());
+		yield return StartCoroutine(RoundEnding());
 	}
 
-	private IEnumerator PlayersTakePosition(){
-
+	private IEnumerator RoundStarting(){
+		yield return new WaitForSeconds (1f);
 	}
 
-	private IEnumeratorRoundPlaying(){
+	private IEnumerator RoundPlaying(){
+		yield return new WaitForSeconds (1f);
+	}
 
+	private IEnumerator RoundEnding(){
+		yield return new WaitForSeconds (1f);
 	}
 }

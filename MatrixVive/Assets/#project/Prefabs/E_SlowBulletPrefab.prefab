@@ -57,6 +57,7 @@ GameObject:
   - 4: {fileID: 471426}
   - 114: {fileID: 11450684}
   - 114: {fileID: 11422822}
+  - 114: {fileID: 11497406}
   m_Layer: 8
   m_Name: E_SlowBulletPrefab
   m_TagString: Untagged
@@ -206,10 +207,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150166}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.096, z: 0.364}
+  m_LocalRotation: {x: -0.15983985, y: -0.4174661, z: -0.07485836, w: 0.89138633}
+  m_LocalPosition: {x: -0.19640855, y: 0.53, z: 0.79839396}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20.331999, y: -50.1905, z: 0}
   m_Children:
   - {fileID: 490612}
   - {fileID: 413986}
@@ -345,6 +346,18 @@ MonoBehaviour:
   _speed: 3
   _affected: {fileID: 471426}
   _direction: {fileID: 471426}
+--- !u!114 &11497406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c3d3317ae8aa5249978be391d49bf1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifeTime: 10
 --- !u!135 &13520420
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -406,7 +419,7 @@ ParticleSystem:
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 0
-  scalingMode: 1
+  scalingMode: 0
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -915,7 +928,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1603,7 +1616,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2454,7 +2467,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3142,7 +3155,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     curve:
-      scalar: 0.7853982
+      scalar: 0.7853981
       maxCurve:
         serializedVersion: 2
         m_Curve:
