@@ -95,6 +95,7 @@
     <Compile Include="Assets\#project\Scripts\InputController.cs" />
     <Compile Include="Assets\#project\Scripts\SimpleForeward.cs" />
     <Compile Include="Assets\#project\Scripts\WandController.cs" />
+    <Compile Include="Assets\LifeTime.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
