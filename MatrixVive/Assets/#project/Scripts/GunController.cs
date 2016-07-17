@@ -42,7 +42,7 @@ public class GunController : MonoBehaviour {
 	private void FireBullet(){
 		//instantiate bullet
 		GameObject createdBullet = Instantiate (_BulletPrefab, _GunTip.position, Quaternion.identity) as GameObject;
-		createdBullet.transform.up = _GunTip.transform.forward;
+		createdBullet.transform.forward = _GunTip.transform.forward;
 
 		//vibrate controller
 		StartCoroutine(FireRumble(10, 0.15f));
