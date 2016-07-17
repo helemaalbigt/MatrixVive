@@ -9,13 +9,15 @@ public class GunController : MonoBehaviour {
 	private bool _Recharging = false;
 	private int _Bullets = 6;
 
+	private AudioSource _Empty;
+
 	public WandController _Controller;
 	public Transform _GunTip;
 	public GameObject _BulletPrefab;
 
 	// Use this for initialization
 	void Start () {
-	
+		_Empty = GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame
@@ -29,6 +31,7 @@ public class GunController : MonoBehaviour {
 			} else
 			{
 				StartCoroutine (EmptyRumble ());
+				_Empty.Play ();
 				_ReadyToFire = false;
 				if (!_Recharging)
 				{
