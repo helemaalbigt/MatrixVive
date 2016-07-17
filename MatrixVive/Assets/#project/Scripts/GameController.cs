@@ -4,12 +4,20 @@ using System.Collections;
 public class GameController : MonoBehaviour {
 
 	public static int currentScore = 0;
-
+	public static float delayToRestart= 10f;
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+	public void RestartWithDelay(){
+		Invoke ("Restart", delayToRestart);
 	
+	}
+	void Restart(){
+
+		Application.LoadLevel (Application.loadedLevel);
+	}
 	// Update is called once per frame
 	private IEnumerator GameLoop(){
 		yield return StartCoroutine(RoundStarting());
