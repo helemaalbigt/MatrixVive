@@ -90,6 +90,7 @@
     <Compile Include="Assets\#project\Scripts\Eloi\PlayRandomSound.cs" />
     <Compile Include="Assets\#project\Scripts\Eloi\TimeSlower.cs" />
     <Compile Include="Assets\#project\Scripts\Eloi\Tools.cs" />
+    <Compile Include="Assets\#project\Scripts\GameController.cs" />
     <Compile Include="Assets\#project\Scripts\GunController.cs" />
     <Compile Include="Assets\#project\Scripts\InputController.cs" />
     <Compile Include="Assets\#project\Scripts\SimpleForeward.cs" />

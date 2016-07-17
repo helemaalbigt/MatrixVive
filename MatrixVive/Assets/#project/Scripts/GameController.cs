@@ -10,16 +10,4 @@ public class GameController : MonoBehaviour {
 	
 	}
 	
-	// Update is called once per frame
-	private IEnumerator GameLoop(){
-
-	}
-
-	private IEnumerator PlayersTakePosition(){
-
-	}
-
-	private IEnumeratorRoundPlaying(){
-
-	}
 }
